@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #161414;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 3%;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+.pt-4 {
+    padding-top: 16px;
+}
+
+.p-5 {
+    padding: 20px;
+}
+.p-8{
+    padding: 32px;
+}
+.p-12{
+    padding: 48px;
+}
+
+.py-3{
+    padding-block: 12px;
+}
+.py-6 {
+    padding-block: 24px;
+}
+
+.py-16 {
+    padding-block: 64px;
+}
+
+.px-4 {
+    padding-inline: 16px;
+}
+
+
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.mb-5 {
+    margin-bottom: 20px;
+}
+.mb-6{
+    margin-bottom: 24px;
+}
+.mb-10{
+    margin-bottom: 40px;
+}
+
+.mt-16{
+    margin-top: 64px;
+}
+
+.mt-15{
+    margin-top: 60px;
+}
+
+.gap-4{
+    gap: 16px;
+}
+.gap-6{
+    gap: 24px;
+}
+.gap-8 {
+    gap: 32px;
+}
+.gap-10{
+    gap: 40px;
+}
+
+.mx-auto{
+    margin-inline: auto;
+}
+
+/*style background*/
+.bg-grid {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.25),
+      rgba(207, 193, 182, 0.92) 65%
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px
+    );
+  background-size:
+    cover,
+    72px 72px,
+    72px 72px;
+  background-position:
+    center,
+    center,
+    center;
+  background-color: #cfc1b6;
+}
+
+
+
+
+.bg-background {
+    background-image: url('https://res.cloudinary.com/drx06scsw/image/upload/v1766186579/IMG_0900-Editar_n2e3zj.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* GRID ESTILO INSTAGRAM */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 180px;
+    gap: 5px;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.grid-img:hover {
+    opacity: 0.8;
+}
+
+/* MODAL */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.modal-content img {
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    cursor: default;
+    object-fit: cover;
+}
+
+@media (max-width:800px) {
+    .modal-content img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}
