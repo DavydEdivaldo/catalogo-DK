@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
@@ -8,14 +8,32 @@ import Main from './pages/Main';
 import Catalago from './pages/Catalogo';
 import Mauricinho from './pages/Mauricinho';
 import Contato from './pages/Contato';
+import Intro from './components/Intro';
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
+  
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      <AnimatePresence>
+        {showIntro && <Intro />}
+      </AnimatePresence>
+
+    {!showIntro && (
+
       <BrowserRouter>
         <Background />
         <Header />
@@ -46,7 +64,7 @@ function App() {
 
       </BrowserRouter>
 
-
+    )}
     </>
   )
 }
