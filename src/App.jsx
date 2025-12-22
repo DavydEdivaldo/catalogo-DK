@@ -8,11 +8,14 @@ import Main from './pages/Main';
 import Catalago from './pages/Catalogo';
 import Mauricinho from './pages/Mauricinho';
 import Contato from './pages/Contato';
+import Footer from './components/Footer';
 import Intro from './components/Intro';
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AnimatePresence } from "framer-motion";
 
+ 
 
 function App() {
   
@@ -45,6 +48,7 @@ function App() {
                 <Main />
                 <Catalago/>
                 <Contato/>
+                <Footer/>
               </>
             }
           />

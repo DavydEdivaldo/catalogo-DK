@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
-const strokeColor = "#40c9ff";
-const fillColor = "#E6E6E6";
+const strokeColor = "#FFFFFF";
+const fillColor = "#FFFFFF";
 
 export default function Intro() {
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0b0b14]"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#cfc1b6]"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}

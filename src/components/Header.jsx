@@ -47,7 +47,7 @@ export default function Header() {
             className={`fixed w-full top-0 z-50 transition-all duration-500 ${isOpen
                 ? "bg-grid opacity-100"
                 : scrolled
-                    ? "bg-[#030014]/50 backdrop-blur-xl"
+                    ? "bg-[#F2F2F2]/50 backdrop-blur-xl"
                     : "bg-transparent"
                 }`}
         >
@@ -59,7 +59,7 @@ export default function Header() {
                         <a
                             href="#Home"
                             onClick={(e) => scrollToSection(e, "#Home")}
-                            className="text-xl font-bold text-white"
+                            className="text-xl font-bold text-[#F2F2F2]"
                         >
                             DK Confecções
                         </a>
@@ -78,8 +78,8 @@ export default function Header() {
                                 >
                                     <span
                                         className={`relative z-10 transition-colors duration-300 ${activeSection === item.href.substring(1)
-                                            ? "text-white font-semibold"
-                                            : "text-white group-hover:text-[#cccc]"
+                                            ? "text-[#F2F2F2] font-semibold"
+                                            : "text-[#F2F2F2] group-hover:text-[#cccc]"
                                             }`}
                                     >
                                         {item.icon}
@@ -94,7 +94,7 @@ export default function Header() {
                     <div className="md:hidden ">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`relative p-2 text-white cursor-pointer hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
+                            className={`relative p-2 text-[#F2F2F2] cursor-pointer hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
                                 }`}
                         >
                             {isOpen ? (
@@ -123,8 +123,8 @@ export default function Header() {
                                 href={item.href}
                                 target="_blank"
                                 className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${activeSection === item.href.substring(1)
-                                    ? "text-white font-semibold"
-                                    : "text-white hover:text-[#e2d3fd]"
+                                    ? "text-[#F2F2F2] font-semibold"
+                                    : "text-[#F2F2F2] hover:text-[#e2d3fd]"
                                     }`}
                                 style={{
                                     transitionDelay: `${index * 100}ms`,

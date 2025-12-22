@@ -39,6 +39,10 @@ main {
     padding: 48px;
 }
 
+.pb-4{
+    padding-bottom: 16px;
+}
+
 .py-3{
     padding-block: 12px;
 }
@@ -80,6 +84,17 @@ main {
 
 .mt-15{
     margin-top: 60px;
+}
+
+.my-3{
+    margin-block: 12px;
+}
+.my-6{
+    margin-block: 24px;
+}
+
+.mx-auto{
+    margin-inline: auto;
 }
 
 .gap-4{
