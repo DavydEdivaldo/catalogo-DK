@@ -10,7 +10,7 @@ export default function Footer() {
                         <a href="#" className="hover:underline">
                             Davyd
                         </a>
-                        . All Rights Reserved.
+                        
                     </span>
                 </center>
             </footer>
