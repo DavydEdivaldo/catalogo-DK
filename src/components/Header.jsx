@@ -39,6 +39,15 @@ export default function Header() {
         }
     }, [isOpen]);
 
+    useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
 
@@ -47,7 +56,7 @@ export default function Header() {
             className={`fixed w-full top-0 z-50 transition-all duration-500 ${isOpen
                 ? "bg-grid opacity-100"
                 : scrolled
-                    ? "bg-[#F2F2F2]/50 backdrop-blur-xl"
+                    ? "bg-[#585757]/50 backdrop-blur-xl"
                     : "bg-transparent"
                 }`}
         >

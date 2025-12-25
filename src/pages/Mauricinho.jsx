@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../index.css";
 import "../App.css";
 import ImageModal from "../components/Modal";
+import { FaWhatsapp } from "react-icons/fa";
 
 /**
  * Otimiza URLs do Cloudinary
@@ -17,6 +18,11 @@ const cloudinaryOptimize = (url, width = 600) => {
 };
 
 export default function Mauricinho() {
+  const numero = "5581992384292"; // seu WhatsApp
+  const texto = "Olá, quero fazer um pedido";
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+
   const [selectedImage, setSelectedImage] = useState(null);
 
   const photos = [
@@ -52,6 +58,17 @@ export default function Mauricinho() {
           ))}
         </div>
       </section>
+      <footer>
+        <center>
+          <hr className="my-3 border-[#F2F2F2] opacity-15 sm:mx-auto lg:my-6 text-center " />
+          <span className="block text-sm pb-4 text-[#F2F2F2] text-center dark:text-gray-400">
+            <a href={url} target="_blank" className="hover:underline flex flex-row gap-2 justify-center">
+              WhatsApp <FaWhatsapp size={20} />
+            </a>
+
+          </span>
+        </center>
+      </footer>
 
       {selectedImage && (
         <ImageModal
