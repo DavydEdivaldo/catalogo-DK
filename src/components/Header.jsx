@@ -66,8 +66,8 @@ export default function Header() {
                     <img className="w-[80px] h-[80px]" src={logo} alt="" />
                     <div className="flex-shrink-0">
                         <a
-                            href="#Home"
-                            onClick={(e) => scrollToSection(e, "#Home")}
+                            href="https://catalogodkconfeccoes.vercel.app/"
+                            
                             className="text-xl font-bold text-[#F2F2F2]"
                         >
                             DK Confecções
