@@ -38,7 +38,7 @@ export default function Mauricinho() {
   return (
     <>
       <section className="flex w-full min-h-screen justify-center mt-16 max-[800px]:mt-[15%]">
-        <div className="gallery-grid w-[87vw]">
+        <div className="gallery-grid w-[90vw] max-[800px]:w-[95vw]">
           {photos.map((url, index) => (
             <img
               key={index}
