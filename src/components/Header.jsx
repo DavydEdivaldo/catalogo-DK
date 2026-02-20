@@ -10,12 +10,12 @@ export default function Header() {
 
     const navItems = [
         {
-            href: "https://www.instagram.com/davyd_0?igsh=c3oxcHFydjd0M2E5",
+            href: "https://www.instagram.com/dk.confeccoes_",
             icon: <FaInstagram size={20} />,
             label: "Instagram",
         },
         {
-            href: "https://wa.link/5k58iy",
+            href: "https://wa.link/r3rrki",
             icon: <FaWhatsapp size={20} />,
             label: "WhatsApp",
         },

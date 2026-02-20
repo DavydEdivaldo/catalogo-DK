@@ -19,7 +19,7 @@ const cloudinaryOptimize = (url, width = 600) => {
 
 export default function Mauricinho() {
   const numero = "5581992384292"; // seu WhatsApp
-  const texto = "Olá, quero fazer um pedido";
+  const texto = "Olá, gostaria de conhecer as peças e valores no Atacado";
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
 
