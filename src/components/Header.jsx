@@ -12,23 +12,14 @@ export default function Header() {
         {
             href: "https://www.instagram.com/dk.confeccoes_",
             icon: <FaInstagram size={20} />,
-            label: "Instagram",
+             label: "Instagram",
         },
         {
             href: "https://wa.link/r3rrki",
             icon: <FaWhatsapp size={20} />,
             label: "WhatsApp",
         },
-        {
-            href: "",
-            icon: <FaLinkedin size={20} />,
-            label: "LinkedIn",
-        },
-        {
-            href: "",
-            icon: <FaGithub size={20} />,
-            label: "GitHub",
-        },
+        
     ];
 
     useEffect(() => {

@@ -16,8 +16,8 @@ export default function Catalago() {
             link: "/mauricinho"
         },
         {
-            title: "Bermuda Sport fino",
-            description: "Bermuda em tecido brim, com modelagem sofisticada e detalhes de alfaiataria.",
+            title: "Calça Feminina Juvenil",
+            description: "Calça wide lag, estilo e conforto que combina com qualquer look",
             image: "",
             onClick: indisponivel
         },
