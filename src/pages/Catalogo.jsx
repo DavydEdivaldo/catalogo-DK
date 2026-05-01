@@ -49,7 +49,7 @@ export default function Catalago() {
                     initial={{ opacity: 0, y: -40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.3 }}>
+                    viewport={{ once: true, amount: 0.3 }}>
                     <h1 className="max-xl:text-xl mb-2 ">Catálogo</h1>
                     <p className="">
                         Veja mais de nossas peças.
@@ -64,7 +64,7 @@ export default function Catalago() {
                                 initial={{ opacity: 0, x: isMobile ? -200 : index === 0 ? 300 : index === 2 ? -300 : 0, y: isMobile ? 0 : index === 1 ? 40 : 0, }}
                                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                                 transition={{ duration: 0.6, ease: 'easeInOut', delay: index * 0.15 }}
-                                viewport={{ once: false, amount: 0.4 }}
+                                viewport={{ once: true, amount: 0.4 }}
 
                             >
 

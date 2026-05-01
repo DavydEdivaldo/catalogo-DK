@@ -48,7 +48,7 @@ function App() {
               <>
                 <Main />
                 <Catalago/>
-                <Contato/>
+                
                 <Footer/>
                 <Analytics/>
               </>
