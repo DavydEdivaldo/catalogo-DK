@@ -37,25 +37,28 @@ export default function Mauricinho() {
 
   return (
     <>
-      <section className="flex w-full min-h-screen justify-center mt-16 max-[800px]:mt-[15%]">
-        <div className="gallery-grid w-[90vw] max-[800px]:w-[95vw]">
-          {photos.map((url, index) => (
-            <img
-              key={index}
-              src={cloudinaryOptimize(url, 600)} // GRID OTIMIZADOs
-              alt={`foto-${index}`}
-              loading="lazy"
-              decoding="async"
-              className="grid-img cursor-pointer"
-              onClick={() =>
-                setSelectedImage(cloudinaryOptimize(url, 1400)) // MODAL HQ
-              }
-              style={{
-                backgroundImage: `url(${cloudinaryOptimize(url, 20)})`, // BLUR PLACEHOLDER
-                backgroundSize: "cover",
-              }}
-            />
-          ))}
+      <section className="flex w-full min-h-screen justify-center items-start pt-10">
+        <div className="flex flex-col w-[87%] justify-center items-center gap-[35px]">
+          <h1 className="text-[40px] text-white">Short Mauricinho</h1>
+          <div className="gallery-grid w-[90vw] max-[800px]:w-[95vw] gap-2">
+            {photos.map((url, index) => (
+              <img
+                key={index}
+                src={cloudinaryOptimize(url, 600)} // GRID OTIMIZADOs
+                alt={`foto-${index}`}
+                loading="lazy"
+                decoding="async"
+                className="grid-img cursor-pointer"
+                onClick={() =>
+                  setSelectedImage(cloudinaryOptimize(url, 1400)) // MODAL HQ
+                }
+                style={{
+                  backgroundImage: `url(${cloudinaryOptimize(url, 20)})`, // BLUR PLACEHOLDER
+                  backgroundSize: "cover",
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
       <footer>

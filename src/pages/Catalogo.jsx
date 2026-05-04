@@ -10,7 +10,7 @@ export default function Catalago() {
 
     const projects = [
         {
-            title: "Bermuda Mauricinho",
+            title: "Short Mauricinho",
             description: "Feito em tecido confortavel e macio, perfeito para os dias quentes de verão.",
             image: "https://res.cloudinary.com/drx06scsw/image/upload/v1766186580/IMG_0913-Editar-3_rhhqpy.jpg",
             link: "/mauricinho"
