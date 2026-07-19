@@ -69,9 +69,9 @@ export default function Produtos() {
                   </div>
 
                   {/* Parcelamento Simulado */}
-                  <span className="!text-xs !text-neutral-400 block !font-light">
+                  {/* <span className="!text-xs !text-neutral-400 block !font-light">
                     ou 10x de {formatarMoeda(produto.preco / 10)} sem juros
-                  </span>
+                  </span> */}
 
                   {/* Benefícios (Frete Grátis / Full) */}
                   <div className="flex flex-col !gap-1 !pt-1">
