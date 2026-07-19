@@ -1,84 +1,99 @@
-import React, { useState } from "react";
-import "../index.css";
-import "../App.css";
-import ImageModal from "../components/Modal";
-import { FaWhatsapp } from "react-icons/fa";
+import React from 'react';
+import listaProdutos from '../../produtos.json';
 
-/**
- * Otimiza URLs do Cloudinary
- * width padrão:
- * - Grid: 600px
- * - Modal: 1400px
- */
-const cloudinaryOptimize = (url, width = 600) => {
-  return url.replace(
-    "/upload/",
-    `/upload/f_auto,q_auto,w_${width}/`
-  );
-};
-
-export default function Mauricinho() {
-  const numero = "5581992384292"; // seu WhatsApp
-  const texto = "Olá, gostaria de conhecer as peças e valores no Atacado";
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const photos = [
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186576/IMG_0795-Editar_cnibfc.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186575/IMG_0836-Editar_tyxhsq.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186577/IMG_0877-Editar-2_copiar_rnsyjo.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186578/IMG_0880-Editar-3_ybg6o6.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186578/IMG_0888-Editar_dmke3j.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186580/IMG_0913-Editar-2_ym1nrl.jpg",
-    "https://res.cloudinary.com/drx06scsw/image/upload/v1766186579/IMG_0900-Editar_n2e3zj.jpg",
-  ];
+export default function Produtos() {
+  
+ 
+  const formatarMoeda = (valor) => {
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  };
 
   return (
-    <>
-      <section className="flex w-full min-h-screen justify-center items-start pt-10">
-        <div className="flex flex-col w-[87%] justify-center items-center gap-[35px]">
-          <h1 className="text-[40px] text-white">Short Mauricinho</h1>
-          <div className="gallery-grid w-[90vw] max-[800px]:w-[95vw] gap-2">
-            {photos.map((url, index) => (
-              <img
-                key={index}
-                src={cloudinaryOptimize(url, 600)} // GRID OTIMIZADOs
-                alt={`foto-${index}`}
-                loading="lazy"
-                decoding="async"
-                className="grid-img cursor-pointer"
-                onClick={() =>
-                  setSelectedImage(cloudinaryOptimize(url, 1400)) // MODAL HQ
-                }
-                style={{
-                  backgroundImage: `url(${cloudinaryOptimize(url, 20)})`, // BLUR PLACEHOLDER
-                  backgroundSize: "cover",
-                }}
-              />
-            ))}
-          </div>
+    <div className="min-h-screen w-full bg-[#121214] !text-white !pt-32 !pb-16 !px-4 !sm:px-6 !lg:px-8 !font-sans">
+      
+      {/* Cabeçalho */}
+      <div className="!max-w-7xl mx-auto !mb-10">
+        <span className="!text-xs uppercase tracking-[0.3em] !text-neutral-400 !font-semibold block !mb-2">
+          Catálogo Completo
+        </span>
+        <h1 className="!text-3xl !md:text-4xl !font-light !tracking-tight">
+          de <span className="!font-medium bg-clip-text text-transparent bg-gradient-to-r !from-white !to-neutral-400">Shorts Mauricinho</span>
+        </h1>
+      </div>
+
+      
+      <main className="!max-w-7xl !mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 !gap-4">
+          
+          {listaProdutos.map((produto) => (
+            <div 
+              key={produto.id} 
+              className="bg-[#1e1e22] !rounded-xl !overflow-hidden !shadow-md !hover:shadow-2xl !hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border !border-neutral-800 !group cursor-pointer"
+            >
+              {/* Imagem do Produto */}
+              <div className="w-full bg-[#29292e] aspect-square flex items-center justify-center overflow-hidden !p-4 relative">
+                <img 
+                  src={produto.imagem} 
+                  alt={produto.nome}
+                  className="object-cover w-full h-full !group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Informações do Card */}
+              <div className="!p-4 flex flex-col flex-grow justify-between bg-[#1e1e22]">
+                <div className="!space-y-1">
+                  
+                  <h3 className="!text-sm !font-light !text-neutral-200 !line-clamp-2 !tracking-wide !leading-snug !group-hover:text-white transition-colors">
+                    {produto.nome}
+                  </h3>
+                  
+                  {/* Preço Original (Riscado se houver desconto) */}
+                  {produto.desconto && (
+                    <span className="!text-xs !text-neutral-500 line-through block">
+                      {formatarMoeda(produto.precoOriginal)}
+                    </span>
+                  )}
+                </div>
+
+                <div className="!pt-3 !space-y-1.5">
+                  {/* Preço Atual e Tag de Desconto */}
+                  <div className="flex items-baseline !gap-2 flex-wrap">
+                    <span className="!text-xl !font-normal !text-white !tracking-tight">
+                      {formatarMoeda(produto.preco)}
+                    </span>
+                    {produto.desconto && (
+                      <span className="!text-xs !font-semibold !text-emerald-400 !tracking-wide">
+                        {produto.desconto}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Parcelamento Simulado */}
+                  <span className="!text-xs !text-neutral-400 block !font-light">
+                    ou 10x de {formatarMoeda(produto.preco / 10)} sem juros
+                  </span>
+
+                  {/* Benefícios (Frete Grátis / Full) */}
+                  <div className="flex flex-col !gap-1 !pt-1">
+                    {produto.freteGratis && (
+                      <span className="!text-xs !font-medium !text-emerald-400 flex items-center !gap-1">
+                        Frete grátis
+                      </span>
+                    )}
+                    {produto.full && (
+                      <span className="text-[10px] !font-black italic !bg-emerald-500 !text-black !px-1.5 !py-0.5 !rounded w-max !tracking-wider uppercase">
+                        ⚡ FULL
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          ))}
+
         </div>
-      </section>
-      <footer>
-        <center>
-          <hr className="my-3 border-[#F2F2F2] opacity-15 sm:mx-auto lg:my-6 text-center " />
-          <span className="block text-sm pb-4 text-[#F2F2F2] text-center dark:text-gray-400">
-            <a href={url} target="_blank" className="hover:underline flex flex-row gap-2 justify-center">
-              WhatsApp <FaWhatsapp size={20} />
-            </a>
-
-          </span>
-        </center>
-      </footer>
-
-      {selectedImage && (
-        <ImageModal
-          img={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
-    </>
+      </main>
+    </div>
   );
 }

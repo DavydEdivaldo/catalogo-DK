@@ -44,41 +44,41 @@ export default function Header() {
 
     return (
         <nav
-            className={`fixed w-full top-0 z-50 transition-all duration-500 ${isOpen
+            className={`fixed !top-4 left-1/2 -translate-x-1/2 w-[92%] !max-w-7xl !h-16 z-50 !rounded-2xl transition-all duration-500 ${isOpen
                 ? "bg-grid opacity-100"
                 : scrolled
-                    ? "bg-[#585757]/50 backdrop-blur-xl"
+                    ? "bg-[#585757]/50 !backdrop-blur-xl"
                     : "bg-transparent"
                 }`}
         >
-            <div className="mx-auto px-4 sm:px-6 lg:px-[10%] w-full flex justify-center">
-                <div className="flex items-center justify-between h-16 w-[87vw]">
+            <div className="mx-auto !px-4 !sm:px-6 !lg:px-[10%] w-full flex justify-center z-10">
+                <div className="flex items-center justify-between !h-16 w-[87vw] z-10">
                     {/* Logo */}
                     <a href="https://catalogodkconfeccoes.vercel.app/"><img className="w-[80px] h-[80px]" src={logo} alt="logo" /></a>
                     <div className="flex-shrink-0 max-[800px]:hidden">
                         <a
                             href="https://catalogodkconfeccoes.vercel.app/"
                             
-                            className="text-xl font-bold text-[#F2F2F2]"
+                            className="!text-xl !font-bold text-[#F2F2F2]"
                         >
                             DK Confecções
                         </a>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:block">
-                        <div className="ml-8 flex items-center space-x-8 gap-2">
+                    <div className="!hidden !md:block z-10">
+                        <div className="!ml-8 flex items-center !space-x-8 !gap-2">
                             {navItems.map((item) => (
                                 <a
                                     key={item.label}
                                     href={item.href}
                                     target="_blank"
                                     
-                                    className="group relative px-1 py-2 text-sm font-medium"
+                                    className="!group relative !px-1 !py-2 !text-sm !font-medium"
                                 >
                                     <span
                                         className={`relative z-10 transition-colors duration-300 ${activeSection === item.href.substring(1)
-                                            ? "text-[#F2F2F2] font-semibold"
+                                            ? "text-[#F2F2F2] !font-semibold"
                                             : "text-[#F2F2F2] group-hover:text-[#cccc]"
                                             }`}
                                     >
@@ -91,16 +91,16 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden ">
+                    <div className="!md:hidden z-10">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`relative p-3 text-[#F2F2F2] cursor-pointer hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
+                            className={`relative !p-3 !text-[#F2F2F2] !cursor-pointer !hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
                                 }`}
                         >
                             {isOpen ? (
-                                <X className="w-7 h-7 " />
+                                <X className="!w-7 !h-7 " />
                             ) : (
-                                <Menu className="w-7 h-7 " />
+                                <Menu className="!w-7 !h-7 " />
                             )}
                         </button>
                     </div>
@@ -109,21 +109,21 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`md:hidden h-2/5 fixed inset-0 bg-grid transition-all duration-300 ease-in-out ${isOpen
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-[-100%] pointer-events-none"
+                className={`!md:hidden !h-2/5 fixed !inset-0 bg-grid transition-all duration-300 !ease-in-out ${isOpen
+                    ? "!opacity-100 !translate-y-0"
+                    : "!opacity-0 !translate-y-[-100%] pointer-events-none"
                     }`}
                 style={{ top: "64px" }}
             >
-                <div className="flex flex-col h-full justify-center items-center">
-                    <div className="px-4 py-6 space-y-4 flex-1 w-[87vw]">
+                <div className="flex flex-col h-full justify-center items-center !pt-16">
+                    <div className="!px-4 !py-6 !space-y-4 !flex-1 w-[87vw]">
                         {navItems.map((item, index) => (
                             <a
                                 key={item.label}
                                 href={item.href}
                                 target="_blank"
-                                className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${activeSection === item.href.substring(1)
-                                    ? "text-[#F2F2F2] font-semibold"
+                                className={`flex !gap-2 !px-4 !py-3 !text-lg !font-medium transition-all duration-300 ease ${activeSection === item.href.substring(1)
+                                    ? "text-[#F2F2F2] !font-semibold"
                                     : "text-[#F2F2F2] hover:text-[#e2d3fd]"
                                     }`}
                                 style={{
@@ -133,6 +133,7 @@ export default function Header() {
                                 }}
                             >
                                 {item.icon}
+                                {item.label}
                             </a>
                         ))}
                     </div>

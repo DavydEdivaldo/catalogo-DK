@@ -6,7 +6,7 @@ const fillColor = "#FFFFFF";
 export default function Intro() {
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#cfc1b6]"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#121214]"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}

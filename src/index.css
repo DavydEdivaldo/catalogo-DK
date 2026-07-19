@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+/* 
 body {
     color: #161414;
     font-weight: bold;
@@ -25,35 +25,50 @@ main {
     }
 }
 
+.pt-32 {
+    padding-top: 128px;
+}
+
 .pt-4 {
     padding-top: 16px;
 }
-.pt-8{
+
+.pt-8 {
     padding-top: 32px;
 }
-.pt-10{
+
+.pt-10 {
     padding-top: 5em;
 }
-.p-3{
+
+.p-3 {
     padding: 12px;
 }
+
 .p-5 {
     padding: 20px;
 }
-.p-8{
+
+.p-8 {
     padding: 32px;
 }
-.p-12{
+
+.p-12 {
     padding: 48px;
 }
 
-.pb-4{
+.pb-4 {
     padding-bottom: 16px;
 }
 
-.py-3{
+.pb-16 {
+    padding-bottom: 64px;
+}
+
+.py-3 {
     padding-block: 12px;
 }
+
 .py-6 {
     padding-block: 24px;
 }
@@ -79,146 +94,121 @@ main {
 .mb-5 {
     margin-bottom: 20px;
 }
-.mb-6{
+
+.mb-6 {
     margin-bottom: 24px;
 }
-.mb-10{
+
+.mb-10 {
     margin-bottom: 40px;
 }
 
-.mt-16{
+.mt-16 {
     margin-top: 64px;
 }
 
-.mt-15{
+.mt-15 {
     margin-top: 60px;
 }
 
-.my-3{
+.my-3 {
     margin-block: 12px;
 }
-.my-6{
+
+.my-6 {
     margin-block: 24px;
 }
 
-.mx-auto{
+.mx-auto {
     margin-inline: auto;
 }
 
-.gap-2{
+.gap-2 {
     gap: 8px;
 }
-.gap-4{
+
+.gap-4 {
     gap: 16px;
 }
-.gap-6{
+
+.gap-6 {
     gap: 24px;
 }
+
 .gap-8 {
     gap: 32px;
 }
-.gap-10{
+
+.gap-10 {
     gap: 40px;
 }
 
-.mx-auto{
+.mx-auto {
     margin-inline: auto;
-}
+} */
 
 /*style background*/
 .bg-grid {
-  min-height: 100vh;
-  margin: 0;
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0.25),
-      rgba(207, 193, 182, 0.92) 65%
-    ),
-    linear-gradient(
-      rgba(255, 255, 255, 0.18) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.18) 1px,
-      transparent 1px
-    );
-  background-size:
-    cover,
-    72px 72px,
-    72px 72px;
-  background-position:
-    center,
-    center,
-    center;
-  background-color: #cfc1b6;
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.08),
+            rgba(18, 18, 20, 0.98) 65%);
+
+    background-size:
+        cover,
+        72px 72px,
+        72px 72px;
+    background-position:
+        center,
+        center,
+        center;
+    background-color: #121214;
 }
 
-
-
-
+/* 
 .bg-background {
     background-image: url('../public/img/bg-hero.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-/* GRID ESTILO INSTAGRAM */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-auto-rows: 200px;
-    gap: 5px;
-}
-
-.grid-img {
+} */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
-    cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
 }
 
-.grid-img:hover {
-    opacity: 0.8;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.438);
+    z-index: 10;
+    pointer-events: none;
 }
 
-/* MODAL */
-.modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: zoom-out;
+/* .tracking-tight {
+    font-weight: lighter;
+    letter-spacing: -0.05em;
 }
 
-.modal-content {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+.tracking-wide {
+    font-weight: lighter;
+    letter-spacing: 0.025em;
 }
 
-.modal-content img {
-    max-width: 40%;
-    max-height: 40%;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    cursor: default;
-    object-fit: cover;
-}
-
-@media (max-width:800px) {
-    .modal-content img {
-        max-width: 90%;
-        max-height: 90%;
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: 400px; 
-    }
-}
+.line-camp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+} */

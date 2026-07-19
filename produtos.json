@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186576/IMG_0795-Editar_cnibfc.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 2,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186575/IMG_0836-Editar_tyxhsq.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 3,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186577/IMG_0877-Editar-2_copiar_rnsyjo.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 4,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186578/IMG_0880-Editar-3_ybg6o6.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 5,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186578/IMG_0888-Editar_dmke3j.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 6,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": true,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186580/IMG_0913-Editar-2_ym1nrl.jpg",
+    "categoria": "Short"
+  }
+]
