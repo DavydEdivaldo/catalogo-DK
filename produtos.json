@@ -64,5 +64,49 @@
     "full": true,
     "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1766186580/IMG_0913-Editar-2_ym1nrl.jpg",
     "categoria": "Short"
+  },
+  {
+    "id": 7,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": false,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1768671293/WhatsApp_Image_2026-01-17_at_14.09.33_2_waxqkl.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 8,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": false,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1768671293/WhatsApp_Image_2026-01-17_at_14.09.33_r8bpuo.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 9,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": false,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1768671293/WhatsApp_Image_2026-01-17_at_14.09.33_1_ei9qlg.jpg",
+    "categoria": "Short"
+  },
+  {
+    "id": 10,
+    "nome": "Short Mauricinho",
+    "preco": 16.00,
+    "precoOriginal": 18.00,
+    "desconto": "11% OFF",
+    "freteGratis": false,
+    "full": true,
+    "imagem": "https://res.cloudinary.com/drx06scsw/image/upload/v1768671293/WhatsApp_Image_2026-01-17_at_14.09.32_wuiflj.jpg",
+    "categoria": "Short"
   }
 ]

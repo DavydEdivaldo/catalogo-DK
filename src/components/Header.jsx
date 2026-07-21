@@ -66,7 +66,7 @@ export default function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="!hidden !md:block z-10">
+                    <div className="hidden md:block z-10">
                         <div className="!ml-8 flex items-center !space-x-8 !gap-2">
                             {navItems.map((item) => (
                                 <a
@@ -91,10 +91,10 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="!md:hidden z-10">
+                    <div className="md:hidden z-10">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`relative !p-3 !text-[#F2F2F2] !cursor-pointer !hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
+                            className={`relative !p-3 !text-[#F2F2F2] !cursor-pointer hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
                                 }`}
                         >
                             {isOpen ? (
@@ -109,7 +109,7 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`!md:hidden !h-2/5 fixed !inset-0 bg-grid transition-all duration-300 !ease-in-out ${isOpen
+                className={`md:hidden !h-2/5 fixed !inset-0 bg-grid transition-all duration-300 !ease-in-out ${isOpen
                     ? "!opacity-100 !translate-y-0"
                     : "!opacity-0 !translate-y-[-100%] pointer-events-none"
                     }`}
