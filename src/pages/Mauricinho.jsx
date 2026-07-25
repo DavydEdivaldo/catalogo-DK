@@ -15,7 +15,7 @@ export default function Produtos() {
     <div className="min-h-screen w-full bg-[#121214] !text-white !pt-32 !pb-16 !px-4 !sm:px-6 !lg:px-8 !font-sans">
 
       {/* Cabeçalho */}
-      <div className="!max-w-7xl mx-auto !mb-10">
+      <div className="!max-w-7xl !mx-auto !mb-10">
         <span className="!text-xs uppercase tracking-[0.3em] !text-neutral-400 !font-semibold block !mb-2">
           Catálogo Completo
         </span>
