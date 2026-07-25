@@ -1,5 +1,6 @@
 import React from 'react';
 import listaProdutos from '../../produtos.json';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Produtos() {
 
@@ -7,6 +8,8 @@ export default function Produtos() {
   const formatarMoeda = (valor) => {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   };
+
+  const numeroWhatsApp = "5581992384292";
 
   return (
     <div className="min-h-screen w-full bg-[#121214] !text-white !pt-32 !pb-16 !px-4 !sm:px-6 !lg:px-8 !font-sans">
@@ -74,18 +77,32 @@ export default function Produtos() {
                   </span> */}
 
                   {/* Benefícios (Frete Grátis / Full) */}
-                  <div className="flex flex-col !gap-1 !pt-1">
-                    {produto.freteGratis && (
-                      <span className="!text-xs !font-medium !text-emerald-400 flex items-center !gap-1">
-                        Frete grátis
-                      </span>
-                    )}
-                    {produto.full && (
-                      <span className="text-[10px] !font-black italic !bg-emerald-500 !text-black !px-1.5 !py-0.5 !rounded w-max !tracking-wider uppercase">
-                        ⚡ FULL
-                      </span>
-                    )}
+                  <div className='flex justify-between items-end !pt-1'>
+                    <div className="flex flex-col !gap-1 !pt-1">
+                      {produto.freteGratis && (
+                        <span className="!text-xs !font-medium !text-emerald-400 flex items-center !gap-1">
+                          Frete grátis
+                        </span>
+                      )}
+                      {produto.full && (
+                        <span className="text-[10px] !font-black italic !bg-emerald-500 !text-black !px-1.5 !py-0.5 !rounded w-max !tracking-wider uppercase">
+                          ⚡FULL
+                        </span>
+                      )}
+                    </div>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation(); // Evita conflitos caso você adicione um link no card inteiro futuramente
+                        const mensagem = encodeURIComponent(`Olá! Tenho interesse no ${produto.nome} que vi no catálogo.`);
+                        window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+                      }}
+                      className="!bg-emerald-500 hover:!bg-emerald-400 !text-white !p-2.5 !rounded-full transition-all duration-300 active:scale-90 !shadow-lg flex items-center justify-center group-hover:animate-bounce"
+                      title="Pedir pelo WhatsApp"
+                    >
+                      <FaWhatsapp className="w-3 h-3 cursor-pointer" />
+                    </button>
                   </div>
+
                 </div>
               </div>
 
