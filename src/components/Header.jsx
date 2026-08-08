@@ -15,7 +15,7 @@ export default function Header() {
              label: "Instagram",
         },
         {
-            href: "https://wa.link/r3rrki",
+            href: "https://w.app/mipb0j",
             icon: <FaWhatsapp size={20} />,
             label: "WhatsApp",
         },

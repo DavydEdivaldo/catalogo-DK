@@ -9,7 +9,7 @@ export default function Produtos() {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   };
 
-  const numeroWhatsApp = "5581992384292";
+  const numeroWhatsApp = "5581992649198";
 
   return (
     <div className="min-h-screen w-full bg-[#121214] !text-white !pt-32 !pb-16 !px-4 !sm:px-6 !lg:px-8 !font-sans">
