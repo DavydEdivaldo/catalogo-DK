@@ -63,7 +63,7 @@ export default function Catalago() {
                         {projects.map((project, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-[#ffff] !rounded-2xl overflow-hidden !shadow-lg hover:scale-[1.03] !hover:shadow-xl transition-transform duration-300"
+                                className="bg-[#1e1e22] !rounded-2xl overflow-hidden !shadow-lg hover:scale-[1.03] !hover:shadow-xl transition-transform duration-300"
                                 initial={{ opacity: 0, x: isMobile ? -200 : index === 0 ? 300 : index === 2 ? -300 : 0, y: isMobile ? 0 : index === 1 ? 40 : 0, }}
                                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                                 transition={{ duration: 0.6, ease: 'easeInOut', delay: index * 0.15 }}
@@ -73,19 +73,19 @@ export default function Catalago() {
 
                                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
                                 <div className="!p-5">
-                                    <h2 className="!text-xl !font-semibold !mb-2">{project.title}</h2>
-                                    <p className="!text-gray-400 !text-sm !mb-4">{project.description}</p>
+                                    <h2 className="!text-sm !font-medium !text-neutral-200 !line-clamp-2 !tracking-wide !leading-snug group-hover:text-white transition-colors !mb-2">{project.title}</h2>
+                                    <p className="!text-xs !text-neutral-500 !mb-4">{project.description}</p>
                                     {project.link ? (
                                         <Link
                                             to={project.link}
-                                            className="inline-block text-[#40c9ff] !hover:text-blue-300 !font-medium"
+                                            className="!text-xs !font-semibold !text-emerald-400 !tracking-wide"
                                         >
                                             Ver mais →
                                         </Link>
                                     ) : (
                                         <button
                                             onClick={project.onClick}
-                                            className="inline-block text-[#40c9ff] !hover:text-blue-300 !font-medium"
+                                            className="!text-xs !font-semibold !text-emerald-400 !tracking-wide"
                                         >
                                             Ver mais →
                                         </button>

@@ -31,19 +31,19 @@ export default function Produtos() {
           {listaProdutos.map((produto) => (
             <div
               key={produto.id}
-              className="bg-[#1e1e22] !rounded-xl !overflow-hidden !shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border !border-neutral-800 !group cursor-pointer"
+              className="bg-[#1e1e22] !rounded-xl !overflow-hidden !shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between !group cursor-pointer"
             >
               {/* Imagem do Produto */}
-              <div className="w-full bg-[#29292e] aspect-square flex items-center justify-center overflow-hidden !p-4 relative">
+              <div className="w-full bg-[#DCCFC7] aspect-square flex items-center justify-center overflow-hidden  relative">
                 <img
                   src={produto.imagem}
                   alt={produto.nome}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover !w-full !h-full group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               {/* Informações do Card */}
-              <div className="!p-4 flex flex-col flex-grow justify-between bg-[#1e1e22]">
+              <div className="!p-4 flex flex-col flex-grow justify-between bg-[#29292e]">
                 <div className="!space-y-1">
 
                   <h3 className="!text-sm !font-light !text-neutral-200 !line-clamp-2 !tracking-wide !leading-snug group-hover:text-white transition-colors">
