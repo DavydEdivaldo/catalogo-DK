@@ -38,7 +38,7 @@ export default function Produtos() {
                 <img
                   src={produto.imagem}
                   alt={produto.nome}
-                  className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 

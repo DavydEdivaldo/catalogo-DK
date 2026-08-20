@@ -10,7 +10,7 @@ export default function Catalago() {
 
     const projects = [
         {
-            title: "Short Mauricinho",
+            title: "Short Mauricinho Fio Tinto",
             description: "Feito em tecido confortavel e macio, perfeito para os dias quentes de verão.",
             image: "https://res.cloudinary.com/drx06scsw/image/upload/v1766186580/IMG_0913-Editar-3_rhhqpy.jpg",
             link: "/mauricinho"
@@ -54,7 +54,7 @@ export default function Catalago() {
                         Navegue entre
                     </span>
                     <h1 className="!text-3xl !md:text-4xl !font-light !tracking-tight">
-                        Nosso <span className="!font-medium bg-clip-text text-transparent bg-gradient-to-r !from-white !to-neutral-400"> Catálogo</span>
+                         <span className="!font-medium bg-clip-text text-transparent bg-gradient-to-r !from-white !to-neutral-400">Nosso Catálogo</span>
                     </h1>
                 </motion.div>
 

@@ -19,7 +19,7 @@ const Main = () => {
 
             <div className="w-[87vw] flex flex-col justify-center items-start !gap-4 max-[800px]:h-[500px] max-[800px]:justify-center z-10">
                 <h1 className="text-[40px] text-white
-                ">Coleção DK Confecções</h1>
+                ">Coleção Verão 27</h1>
                 <h3 className="text-white">Confira nossa coleção completa de bermudas casuais. Peça direto pelo WhatsApp.</h3>
                 <a href="https://w.app/mipb0j" target="_blank"><Button></Button></a>
             </div>
