@@ -21,7 +21,7 @@ const Main = () => {
                 <h1 className="text-[40px] text-white
                 ">Coleção Verão 27</h1>
                 <h3 className="text-white">Confira nossa coleção completa de bermudas casuais. Peça direto pelo WhatsApp.</h3>
-                <a href="https://w.app/mipb0j" target="_blank"><Button></Button></a>
+                <a href="https://wa.link/p5blyy" target="_blank"><Button></Button></a>
             </div>
         </section>
     );
