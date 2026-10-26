@@ -1,154 +1,32 @@
 @import "tailwindcss";
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-/* 
-body {
-    color: #161414;
-    font-weight: bold;
-}
+ :root {
+        color-scheme: light;
+        --paper: #f5f1e9;
+        --ink: #20221d;
+        --muted: #6e7068;
+        --tomato: #e75237;
+        --line: rgba(32, 34, 29, 0.17);
+        --display: "Playfair Display", Georgia, serif;
+        --body: "DM Sans", sans-serif;
+      }
 
-main {
-    margin-top: 3%;
-}
+      * { box-sizing: border-box; }
 
-@media (max-width: 800px) {
-    h1 {
-        font-size: 27px;
-    }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background-color: var(--paper);
+        background-image: radial-gradient(rgba(32, 34, 29, 0.10) 0.65px, transparent 0.65px);
+        background-size: 7px 7px;
+        font-family: var(--body);
+      }
 
-    h3 {
-        font-size: 20px;
-    }
-}
-
-.pt-32 {
-    padding-top: 128px;
-}
-
-.pt-4 {
-    padding-top: 16px;
-}
-
-.pt-8 {
-    padding-top: 32px;
-}
-
-.pt-10 {
-    padding-top: 5em;
-}
-
-.p-3 {
-    padding: 12px;
-}
-
-.p-5 {
-    padding: 20px;
-}
-
-.p-8 {
-    padding: 32px;
-}
-
-.p-12 {
-    padding: 48px;
-}
-
-.pb-4 {
-    padding-bottom: 16px;
-}
-
-.pb-16 {
-    padding-bottom: 64px;
-}
-
-.py-3 {
-    padding-block: 12px;
-}
-
-.py-6 {
-    padding-block: 24px;
-}
-
-.py-16 {
-    padding-block: 64px;
-}
-
-.px-4 {
-    padding-inline: 16px;
-}
-
-
-
-.mb-2 {
-    margin-bottom: 8px;
-}
-
-.mb-4 {
-    margin-bottom: 16px;
-}
-
-.mb-5 {
-    margin-bottom: 20px;
-}
-
-.mb-6 {
-    margin-bottom: 24px;
-}
-
-.mb-10 {
-    margin-bottom: 40px;
-}
-
-.mt-16 {
-    margin-top: 64px;
-}
-
-.mt-15 {
-    margin-top: 60px;
-}
-
-.my-3 {
-    margin-block: 12px;
-}
-
-.my-6 {
-    margin-block: 24px;
-}
-
-.mx-auto {
-    margin-inline: auto;
-}
-
-.gap-2 {
-    gap: 8px;
-}
-
-.gap-4 {
-    gap: 16px;
-}
-
-.gap-6 {
-    gap: 24px;
-}
-
-.gap-8 {
-    gap: 32px;
-}
-
-.gap-10 {
-    gap: 40px;
-}
-
-.mx-auto {
-    margin-inline: auto;
-} */
+      a { color: inherit; }
 
 /*style background*/
-.bg-grid {
+/* .bg-grid {
     min-height: 100vh;
     margin: 0;
     background:
@@ -165,7 +43,7 @@ main {
         center,
         center;
     background-color: #121214;
-}
+} */
 
 /* 
 .bg-background {
@@ -185,7 +63,7 @@ main {
     pointer-events: none;
 }
 
-.overlay {
+/* .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -195,7 +73,7 @@ main {
     background-color: rgba(0, 0, 0, 0.438);
     z-index: 10;
     pointer-events: none;
-}
+} */
 
 /* .tracking-tight {
     font-weight: lighter;
