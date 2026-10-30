@@ -95,14 +95,16 @@ export default function Produtos() {
 
                   <div className='flex justify-between items-end !pt-1'>
                     <div className="flex flex-col !gap-1 !pt-1">
-                      {produto.freteGratis && (
+                      {produto.info && (
                         <span className="!text-xs !font-medium text-[var(--tomato)] flex items-center !gap-1">
-                          Frete grátis
+                          Oferta exclusiva para atacado!!
                         </span>
                       )}
-                      {produto.full && (
+                      {produto.varejo && (
                         <span className="text-[10px] !font-black italic bg-[var(--ink)] text-[var(--paper)] !px-1.5 !py-0.5 !rounded w-max !tracking-wider uppercase">
-                          ⚡FULL
+                          <a href={produto.varejo} target="_blank" rel="noopener noreferrer">
+                            ⚡VAREJO
+                          </a>
                         </span>
                       )}
                     </div>
