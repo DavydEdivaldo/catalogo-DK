@@ -91,7 +91,7 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden z-10">
+                    {/* <div className="md:hidden z-10">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className={`relative !p-3 !text-[#F2F2F2] !cursor-pointer hover:text-[#e2d3fd] transition-transform duration-300 ease-in-out transform ${isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
@@ -103,12 +103,12 @@ export default function Header() {
                                 <Menu className="!w-7 !h-7 " />
                             )}
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div
+            {/* <div
                 className={`md:hidden !h-2/5 fixed !inset-0 bg-grid transition-all duration-300 !ease-in-out ${isOpen
                     ? "!opacity-100 !translate-y-0"
                     : "!opacity-0 !translate-y-[-100%] pointer-events-none"
@@ -138,7 +138,7 @@ export default function Header() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
         </nav>
 
     );
